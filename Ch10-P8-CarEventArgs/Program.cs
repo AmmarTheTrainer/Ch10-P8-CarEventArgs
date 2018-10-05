@@ -15,6 +15,9 @@ namespace Ch10_P8_CarEventArgs
             // Register event handlers.
             c1.AboutToBlow += C1_AboutToBlow1; ;
 
+
+            c1.Exploded += (sender, e) => { Console.WriteLine(e.msg); };
+
             Console.WriteLine("***** Speeding up *****");
             for (int i = 0; i < 6; i++)
                 c1.Accelerate(20);
